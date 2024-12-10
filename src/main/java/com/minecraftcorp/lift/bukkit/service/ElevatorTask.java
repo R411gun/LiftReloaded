@@ -127,7 +127,7 @@ public class ElevatorTask extends BukkitRunnable {
 
 	private boolean reachedDestination(Entity entity) {
 		return elevator.isGoingUp() ?
-				entity.getBoundingBox().getMinY() > elevator.getDestFloor().getFloorY() + 1:
+				entity.getBoundingBox().getMinY() > elevator.getDestFloor().getFloorY() + 0.1:
 				entity.getBoundingBox().getMinY() < elevator.getDestFloor().getButtonY();
 	}
 
